@@ -32,8 +32,19 @@
 # print(2>3 or 6>4)
 # print(not 2>3)
 
-age = 10
-if age>=18:
-    print('adult')
-else:
-    print('child')
+# age = 10
+# if age>=18:
+#     print('adult')
+# else:
+#     print('child')
+
+# a = 123
+# print(a)
+# a = '123'
+# print(a)
+
+# int a = 123 这句好像不符合python语法
+# print(a)
+# a = '123'
+# print(a)
+
