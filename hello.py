@@ -95,9 +95,8 @@ y = 'ABC'
 # print(len(b'\xe4\xb8\xad\xe6\x96\x87'))
 # print(len('中文'.encode('utf-8')))
 
-print('hello, %s world.' % ('the fucking'))
-
-print('Hi, %s, you have $%d.' % ('Michael',100000))
+# print('hello, %s world.' % ('the fucking'))
+# print('Hi, %s, you have $%d.' % ('Michael',100000))
 
 # print('%2d-%02d' % (3,1))
 # print('%2d-%20d' % (3,1))
@@ -109,7 +108,41 @@ print('Hi, %s, you have $%d.' % ('Michael',100000))
 # print('grouth rate: %d %%' % 7)
 
 # print('hello,{0},成绩提升了{1:.1f}%'.format('小明',17.125))
-s1 = 72
-s2 = 85
-r = (s2-s1)/s1
-print('%s, 成绩提升了%f%%' % ('小明', r))
+# s1 = 72
+# s2 = 85
+# r = (s2-s1)/s1
+# print('%s, 成绩提升了%f%%' % ('小明', r))
+
+# classmates = ['Michael','Bob','Tracy']
+# print(classmates)
+# print(len(classmates))
+# print(classmates[0])
+# print(classmates[-1])
+# classmates.append('Adam')
+# classmates.insert(1,'Jack')
+# print(classmates.pop(1))
+# classmates[1]='Sarah'
+# print(classmates)
+
+# L = ['apple', 123, True]
+# S = ['python','java',['asp','php'],'scheme']
+# print(L)
+# print(S)
+# print(len(S))
+# print(S[2][1])
+
+# t = (1)
+# t1 = (1,)
+# t2 = (1,2,['x','y'])
+# t2[2][0] = 'A'
+# t2[2][1] = 'B'
+# print(t2)
+
+L = [
+    ['Apple','Google','Microsoft'],
+    ['Java','Python','Ruby','PHP'],
+    ['Adam','Bart','Lisa']
+]
+print(L[0][0])
+print(L[1][1])
+print(L[2][2])
