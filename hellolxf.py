@@ -264,7 +264,25 @@ y = 'ABC'
 # print(b.replace('a','A'))
 # print(b)
 
-d = {(1, 2, 3)}
+# d = {(1, 2, 3)}
 # e = {(1, [2, 3])}
-print(d)
+# print(d)
 # print(e)
+
+# print(abs(-30))
+# print(max(1,424,35))
+# print(int('123'))
+# print(str(123))
+# print(bool(''))
+# print(float(8))
+# n1 = 225
+# n2 = 1000
+# print(hex(n1))
+# print(hex(n2))
+
+# def my_abs(x):
+#     if x >= 0:
+#         return x
+#     else:
+#         return -x
+# print(my_abs(-10))
