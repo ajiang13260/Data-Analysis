@@ -335,12 +335,22 @@ y = 'ABC'
 # print(add_end([]))
 # print(add_end)
 
-def calc(*numbers):
-    sum = 0
-    for n in numbers:
-        sum = sum + n*n
-    return sum 
-print(calc(1,2,3))
+# def calc(*numbers):
+#     sum = 0
+#     for n in numbers:
+#         sum = sum + n*n
+#     return sum 
+# print(calc(1,2,3))
 
-nums = [1,2,3]
-print(calc(*nums))
+# nums = [1,2,3]
+# print(calc(*nums))
+
+def person(name,age,**kw):
+    print('name:',name,'age:',age,'other:',kw)
+extra = {'city':'bj','weight':'120'}
+print(person('Bob',40,**extra))
+
+def person1(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+extra = {'city': 'Beijing', 'job': 'Engineer'}
+print(person1('Jack', 24, **extra))
