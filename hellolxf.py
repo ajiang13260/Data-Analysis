@@ -415,9 +415,64 @@ y = 'ABC'
 # f1(*args,**kw)
 # f2(*args1,**kw)
 
-def product(m):
-    m = (x, **kw)
-    for n in m
-        sum = sum + n*n
-    return sum
-print(product(4))
+# def product(x, y):
+#     return x * y
+# print(product(3, 4))
+
+# 思路1，将输入的函数用list的方式导入，再用for循环相乘，失败
+# def product1(m):
+#     sum = 0
+#     for n in m:
+#         sum = sum * n
+#     return sum 
+# print(product1([1,2,3,4,5]))
+# 是不是传入list和引用list的方式不对？
+# def product1(*nums):
+#     sum = 1
+#     for n in nums:
+#         sum = sum * n
+#     return sum 
+# nums = [1,2,3,4]
+# print(product1(*nums))
+# 绝了，最终原因是我把sum初始值设成0了，乘来乘去什么用
+
+# def calc(*num):
+#     sum = 1
+#     for n in num:
+#         sum = sum * n
+#     return sum
+# print(calc(1,2,3))
+
+# def product1(x,*nums):
+#     sum = 1*x
+#     for n in nums:
+#         sum = sum * n
+#     return sum 
+
+# 测试
+# print('product1(5)=', product1(5))
+# print('product1(5,6)=', product1(5,6))
+# print('product1(5,6,7)=', product1(5,6,7))
+# print('product1(5,6,7,9)=', product1(5,6,7,9))
+# print('product1(a)=',product1('a'))
+# if product1(5) != 5:
+#     print('测试失败！')
+# elif product1(5,6) != 30:
+#     print('测试失败！')
+# elif product1(5,6,7) != 210:
+#     print('测试失败！')
+# elif product1(5,6,7,9) != 1890:
+#     print('测试失败！')
+# else:
+#     try:
+#         product1()
+#         print('测试失败！')
+#     except TypeError:
+#         print('测试成功！') 
+
+def fun(n):
+    if n == 1:
+        return 1
+    return n*fun(n-1)
+
+print(fun(3))
