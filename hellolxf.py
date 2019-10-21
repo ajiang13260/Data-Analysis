@@ -477,6 +477,7 @@ y = 'ABC'
 
 # print(fun(3))
 
+    # 递归函数
 # def fact(n):
 #     return fact_iter(n, 1)
 # def fact_iter(num, product):
@@ -496,6 +497,8 @@ y = 'ABC'
 #         move(n-1,b,a,c)
 # print(move(64, 'a', 'b', 'c'))
 
+# 高级特性
+    # 切片
 # L = ['Michael','Sarah','Tracy','Bob','Jack']
 # r = []
 # for i in range(3):
@@ -553,7 +556,8 @@ y = 'ABC'
 #     print('测试失败6')
 # else:
 #     print('测试成功！')
-
+    
+    # 迭代
 # d = {'a':1, 'b':2, 'c':3}
 # for key in d:
 #     print(key)
@@ -575,28 +579,70 @@ y = 'ABC'
 # for i, value in  enumerate(['A','B','C']):
 #     print(i,value)
 
-def findMinAndMax(L):
-    if L == []:
-        min = None
-        max = None
-    else:
-        min = L[0]
-        max = L[0]
-        for i in L:
-            if i < min:
-                min = i
-            if i > max:
-                max = i
-    return (min,max)
+# def findMinAndMax(L):
+#     if L == []:
+#         min = None
+#         max = None
+#     else:
+#         min = L[0]
+#         max = L[0]
+#         for i in L:
+#             if i < min:
+#                 min = i
+#             if i > max:
+#                 max = i
+#     return (min,max)
+
+# # 测试
+# if findMinAndMax([]) != (None,None):
+#     print('测试失败1')
+# elif findMinAndMax([7]) != (7,7):
+#     print('测试失败2')
+# elif findMinAndMax([7,1]) != (1,7):
+#     print('测试失败3')
+# elif findMinAndMax([7,1,3,9,5]) != (1,9):
+#     print('测试失败4')
+# else:
+#     print('测试成功')
+
+    # 列表生成器
+# print(list(range(1,11)))
+
+# L = []
+# for x in range(1,11):
+#     L.append(x * x)
+# print(L)
+
+# print([x*x for x in range(1,11)])
+# print([x*x for x in range(1,11) if x%2 == 0])
+# print([m + n for m in 'ABC' for n in 'XYZ'])
+
+# import os
+# print([d for d in os.listdir(.)])
+# 你忘记加‘’了大傻蛋！！！
+# print([d for d in os.listdir('.')])
+
+# d = {'x':'A','y':'B','z':'C'}
+# for k, v in d.items():
+#     print(k,'=',v)
+
+# print([k+'='+v for k,v in d.items()])
+
+# L = ['Hello','World','IBM','Apple']
+# print([s.lower() for s in L])
+
+L1 = ['Hello','World',18,'Apple',None]
+# L = []
+# for x in L1:
+#     if isinstance(x,str) == True:
+#         L.append(x)
+# L2 = [s.lower() for s in L]
+
+L2 = [s.lower() for s in L1 if isinstance(s,str)== True]
 
 # 测试
-if findMinAndMax([]) != (None,None):
-    print('测试失败1')
-elif findMinAndMax([7]) != (7,7):
-    print('测试失败2')
-elif findMinAndMax([7,1]) != (1,7):
-    print('测试失败3')
-elif findMinAndMax([7,1,3,9,5]) != (1,9):
-    print('测试失败4')
+print(L2)
+if L2 == ['hello','world','apple'] :
+    print('测试通过')
 else:
-    print('测试成功')
+    print('测试失败')
