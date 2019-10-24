@@ -691,12 +691,12 @@ def fib(max):
 #         print('General reeturn value:',e.value)
 #         break
 
-def triangless():
-    L = [1]
-    while 1:
-        yield L
-        L = [0] + L + [0]
-        L = [L[i] + L[i+1] for i in range(len(L)-1)]
+# def triangless():
+#     L = [1]
+#     while 1:
+#         yield L
+#         L = [0] + L + [0]
+#         L = [L[i] + L[i+1] for i in range(len(L)-1)]
 
 
 # 期待输出:
@@ -712,28 +712,57 @@ def triangless():
 # [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
 
 # 测试
-n = 0
-results = []
-for t in triangless():
-    results.append(t)
-    n = n + 1
-    if n == 10:
-        break
-for t in results:
-    print(t)
+# n = 0
+# results = []
+# for t in triangless():
+#     results.append(t)
+#     n = n + 1
+#     if n == 10:
+#         break
+# for t in results:
+#     print(t)
 
-if results == [
-    [1],
-    [1, 1],
-    [1, 2, 1],
-    [1, 3, 3, 1],
-    [1, 4, 6, 4, 1],
-    [1, 5, 10, 10, 5, 1],
-    [1, 6, 15, 20, 15, 6, 1],
-    [1, 7, 21, 35, 35, 21, 7, 1],
-    [1, 8, 28, 56, 70, 56, 28, 8, 1],
-    [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
-]:
-    print('测试通过')
-else:
-    print('测试失败')
+# if results == [
+#     [1],
+#     [1, 1],
+#     [1, 2, 1],
+#     [1, 3, 3, 1],
+#     [1, 4, 6, 4, 1],
+#     [1, 5, 10, 10, 5, 1],
+#     [1, 6, 15, 20, 15, 6, 1],
+#     [1, 7, 21, 35, 35, 21, 7, 1],
+#     [1, 8, 28, 56, 70, 56, 28, 8, 1],
+#     [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+# ]:
+#     print('测试通过')
+# else:
+#     print('测试失败')
+
+# from collections.abc import Iterable
+# # from collectios will stop working
+# print(isinstance([],Iterable))
+# print(isinstance({},Iterable))
+# print(isinstance('',Iterable))
+# print(isinstance((x for x in range(10)),Iterable))
+# print(isinstance(100,Iterable))
+
+# from collections.abc import Iterator
+# from collectios will stop working
+# print(isinstance(iter([]),Iterator))
+# print(isinstance(iter({}),Iterator))
+# print(isinstance(iter(''),Iterator))
+# print(isinstance((x for x in range(10)),Iterator))
+# print(isinstance(100,Iterator))
+
+# for x in [1,2,3,4,5,6,7]:
+#     pass
+
+# it = iter([1,2,3,4,5,6,7])
+# while True:
+#     try:
+#         x = next(it)
+#         print(x)
+#     except StopIteration:
+#         print('StopIteration')
+#         break
+
