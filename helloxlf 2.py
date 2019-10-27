@@ -10,6 +10,7 @@
 #     return x*x
 # r = map(f, [1,2,3,4,5,6])
 # print(list(r))
+# print(r)
 
 # L = []
 # for n in [1,2,3,4,5,6]:
@@ -19,7 +20,7 @@
 # print(list(map(str,[1,2,3,4])))
 # print(list(map(abs,[-1,-2,3])))
 
-from functools import reduce
+# from functools import reduce
 # def fn(x,y):
 #     return x*10+y
 
@@ -48,9 +49,9 @@ from functools import reduce
 #     return reduce(lambda x,y: x*10+y, map(char2num,s))
 # print(str2int('1357'))
 
-def normalize(name):
+# def normalize(name):
     
 # 测试:
-L1 = ['adam', 'LISA', 'barT']
-L2 = list(map(normalize, L1))
-print(L2)
+# L1 = ['adam', 'LISA', 'barT']
+# L2 = list(map(normalize, L1))
+# print(L2)
