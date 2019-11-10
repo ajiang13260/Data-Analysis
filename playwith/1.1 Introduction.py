@@ -81,4 +81,18 @@ Created on Sun Nov 10 11:05:43 2019
 # print(m)
 # print(r)
 
-print(-4.13e-3)
+# print(-4.13e-3)
+
+# complex
+# x = 4+5j
+# print(x.imag, x.real, x.conjugate())
+
+# print(-7-(-7//2)*2)
+
+# compare
+# print('xyz'>'abc')
+
+# print(r'hello\nworld')
+# print('hello\\nworld')
+
+# f = open('C:\\Users\\Speed\\Documents\\Data Analysis\\liaoxuefeng\\hellolxf1.py','w')
