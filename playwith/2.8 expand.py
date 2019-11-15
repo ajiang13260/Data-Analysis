@@ -69,12 +69,24 @@
 #     f.close()
 
 # Filename:exception14.py
-try:
-    with open('data.txt') as f:
-        for line in f:
-            print(line, end=' ')
-except IOError:
-    print('Cannot open the file!')
-finally:
-    f.close()
+# try:
+#     with open('data.txt') as f:
+#         for line in f:
+#             print(line, end=' ')
+# except IOError:
+#     print('Cannot open the file!')
+# finally:
+#     f.close()
 
+
+
+while True:
+    try:
+        count = int(input('Enter count:'))
+        price = float(input('Enter price for each one:'))
+        pay = count * price
+        print('The price is', pay)
+        break
+    except Exception as err:
+        print('Error, please enter numeric one.')
+    
