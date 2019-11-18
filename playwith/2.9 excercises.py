@@ -35,12 +35,38 @@
 # n = eval(input('enter a number as n:'))
 # def 
 
-# six question
-y = eval(input('enter a number:'))
-for i in  
-if y % 37 == 0:
-    y = y % 10 * 100 + y // 10
-    if y % 37 == 0:
-        print(True) 
-    else:
-        print(False) 
+# fifth question
+# for i in [1,2,3,4]:
+#     for j in [1,2,3,4]:
+#         for k in [1,2,3,4]:
+#             if i == j or i == k or k == i:
+#                 continue
+#             else:
+#                 s = i * 100 + j * 10 + k
+#                 print(s)
+
+
+# sixth question
+# y = eval(input('enter a number:'))
+# sum = []
+# for s in range(1,11):
+#     sum.append(37 * s)
+# for i in sum:
+#     if i % 37 == 0:
+#         i = i % 10 * 100 + i // 10
+#         if i % 37 == 0:
+#             print(True) 
+#         else:
+#             print(False) 
+
+# seventh question
+s = 0
+n = 0
+for i in range(1,1001):
+    for n in range(1, i-1):
+        while i % n == 0:
+            s = s + n
+    if i == n:
+        print(i)
+
+# 
