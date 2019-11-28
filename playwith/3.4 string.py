@@ -39,7 +39,19 @@
 # print(dir(str))
 # dir(str)
 
-song = 'Blowing in the wind~'
-print(song.find('the'))
-print(song.find('the',8,12))
-print(song.lower())
+# song = 'Blowing in the wind~'
+# print(song.find('the'))
+# print(song.find('the',8,12))
+# print(song.lower())
+# print(song.split(' '))
+# print(song.replace('~',''))
+# aList = ['Hello','World']
+# print(','.join(aList))
+# y = '你好'
+# z = y.encode('utf-8')
+# print(z)
+# t = z.decode()
+# print(t)
+x = b'\xe6\x89\x8e\xe5\xbf\x83\xe4\xba\x86\xef\xbc\x8c\xe8\x80\x81\xe9\x93\x81'
+y = x.decode()
+print(y)

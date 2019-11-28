@@ -44,35 +44,35 @@ Crawler
 # print(soup.find_all('b'))
 # print(soup.find('b'))
 
-# import requests
-# from bs4 import BeautifulSoup
-# r = requests.get('https://y.qq.com/n/yqq/playlist/1488252888.html#comment_box')
-# print(r.status_code)
-# soup = BeautifulSoup(r.text, 'lxml')
-# pattern = soup.find_all('p','c_tx_normal comment__text js_hot_text')
-# for item in pattern:
-#     print(item.string)
-
-# -*-coding:utf-8-*-
-"""
-Crawler
-
-@author:Ajiang
-"""
 import requests
 from bs4 import BeautifulSoup
-import re
-
-s = 0
-headers = {'User-Agent':"Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.83 Safari/535.11"}
-r = requests.get('https://movie.douban.com/subject/25887288/comments?status=P', headers = headers)
+r = requests.get('https://y.qq.com/n/yqq/playlist/1488252888.html#comment_box')
 print(r.status_code)
 soup = BeautifulSoup(r.text, 'lxml')
-pattern = soup.find_all('span','short')
+pattern = soup.find_all('div','lyric__cont')
 for item in pattern:
     print(item.string)
-pattern_s = re.compile('<span class="allstar(.*?) rating"')
-p = re.findall(pattern_s, r.text)
-for star in p:
-    s += int(star)
-print(s)
+
+# -*-coding:utf-8-*-
+# """
+# Crawler
+
+# @author:Ajiang
+# """
+# import requests
+# from bs4 import BeautifulSoup
+# import re
+
+# s = 0
+# headers = {'User-Agent':"Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.83 Safari/535.11"}
+# r = requests.get('https://movie.douban.com/subject/25887288/comments?status=P', headers = headers)
+# print(r.status_code)
+# soup = BeautifulSoup(r.text, 'lxml')
+# pattern = soup.find_all('span','short')
+# for item in pattern:
+#     print(item.string)
+# pattern_s = re.compile('<span class="allstar(.*?) rating"')
+# p = re.findall(pattern_s, r.text)
+# for star in p:
+#     s += int(star)
+# print(s)
