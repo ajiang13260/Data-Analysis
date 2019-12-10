@@ -1,18 +1,19 @@
-# 是自己写的失败的版本
-def fac(n):
-    for x in range(2,n):
-        y = 0  
-        for i in range(1,x):
-            if x % i == 0:
-                y += i
-        sumy = 0
-        for k in range(1,y):
-            if y % k == 0:
-                sumy += k
-        if sumy == x & x < y:
-            print("{}-{}".format(x, y))
-n = int(input('input:'))
-fac(n)
+# 寻找n以内的亲密数对。
+# 是自己写的失败的版本，经过更改成功了
+# def fac(n):
+#     for x in range(2,n):
+#         y = 0  
+#         for i in range(1,x):
+#             if x % i == 0:
+#                 y += i
+#         sumy = 0
+#         for k in range(1,y):
+#             if y % k == 0:
+#                 sumy += k
+#         if sumy == x & x < y:
+#             print("{}-{}".format(x, y))
+# n = int(input('input:'))
+# fac(n)
 
 # 网上找的成功版本
 # def fac(x):
@@ -31,3 +32,6 @@ fac(n)
 
 # n = int(input())
 # fac(n)
+
+# 寻找第n个默尼森数。
+
