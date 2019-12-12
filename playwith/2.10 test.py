@@ -34,4 +34,23 @@
 # fac(n)
 
 # 寻找第n个默尼森数。
+def prime(num):
+    if num == 1:
+        return False
+    for i in range(2,num):
+        if num % i == 0:
+            return False
+    return True
 
+def monisen(no):
+    count = 0
+    p_num = 1
+    while count < no:
+        p_num += 1
+        if prime(p_num):
+            if prime(2**p_num-1):
+                count += 1
+                if count == no:
+                    return 2**p_num-1
+no = int(input('input:'))                        
+print('the {:d} monisen is {:d}'.format(no,monisen(no)))

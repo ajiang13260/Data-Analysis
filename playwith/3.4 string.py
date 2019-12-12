@@ -1,11 +1,14 @@
 # a = 'Hello, World!'
-# b = a[0:7] + 'Python!'
+# # b = a[0:7] + 'Python!'
+# b = a.replace('World','Python')
 # print(b)
 # count = 0
 # for ch in b[:]:
 #     if ch in ',.?!':
 #         count += 1
 # print(count)
+# print('There are %d punctuation marks.'%(count))
+# print('There are {:d} punctuation marks.'.format(count))
 
 # age, height = 21, 1.758
 # print('Age:{0:<5d}, Height:{1:5.2f}'.format(age, height))
@@ -52,6 +55,36 @@
 # print(z)
 # t = z.decode()
 # print(t)
-x = b'\xe6\x89\x8e\xe5\xbf\x83\xe4\xba\x86\xef\xbc\x8c\xe8\x80\x81\xe9\x93\x81'
-y = x.decode()
-print(y)
+# x = b'\xe6\x89\x8e\xe5\xbf\x83\xe4\xba\x86\xef\xbc\x8c\xe8\x80\x81\xe9\x93\x81'
+# y = x.decode()
+# print(y)
+
+# Filename:totitle.py
+# aStr = 'What do you think of saying "No pain, No gain"?'
+# # lindex = aStr.index('\"', 0, len(aStr))
+# # rlindex = aStr.rindex('\"', 0, len(aStr))
+# # tempStr = aStr[lindex+1:rlindex]
+# tempStr = aStr.split('\"')[1]
+# if tempStr.istitle():
+#     print('It is title format.')
+# else:
+#     print('It is not title format.')
+# print(tempStr.title())
+
+# string = 'My moral standing is: 0.98765'
+# ans = string.split(' ')[4]
+# print(float(ans))
+# print('my'.split())
+
+# f = ['HELLO', 'PH', 'Hi', 'read', 'tmp123', 'Our', 'vmr']
+# for a in f:
+#     a_temp = a.lower()
+#     for ch in a_temp:
+#         print(ch)
+#         if ch in 'aeiou' or ch in '0123456789':
+#             break
+#     else:
+#         print(a)
+
+# i = '5' * 2000
+# print(int(i)%84) 
