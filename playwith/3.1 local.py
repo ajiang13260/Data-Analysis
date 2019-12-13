@@ -53,17 +53,53 @@
 #     # print(fname,'has',str(lens),'lines')
 #     print(fname.split('\\')[1] ,'has' , str(lens) , 'lines')
 
-# # files = ['lyrics.txt','data.txt','firstpro.txt','secpro.txt']
-# # for fname in files:
-# #     countLines(fname)
+# files = ['1.1 Introduction.py','1.2 firstpython.py','1.3 Grammaticalbasis.py']
+# for fname in files:
+#     countLines(fname)
 
 # path = '../Data Analysis'
 # for fname in os.listdir(path):
 #     if fname.endswith('.txt'):
 #         file_path = os.path.join(path, fname)
 #         countLines(file_path)
+# import os
+# import shutil
+# if os.path.exists('./output'):
+#     shutil.rmtree('./output')
+# os.mkdir('./output')
+
+# import os
+# f = open('test.md','w')
+# f.write('Hello,World!')
+# f.close
+
+# with open('more.txt','w') as f:
+#     f.write('Love you one thousand times')
+
+# with open('Blowing in the wind.txt') as f1:
+#     p1 = f1.readlines()
+# for i in range(0, len(p1)):
+#     p1[i] = str(i+1)+' '+p1[i]
+# with open('Blowing in the wind.txt','w') as f2:
+#     f2.writelines(p1)
+
 import os
-import shutil
-if os.path.exists('./output'):
-    shutil.rmtree('./output')
-os.mkdir('./output')
+def countLines(fname):
+    try:
+        with open(fname,'rb') as f:
+            data = f.readlines()
+    except FileNotFoundError:
+        print(fname+ 'does not exit.')
+    lens = len(data)
+    print(fname.split('\\')[1],'has',str(lens), 'lines.')
+
+# files = ['Blowing in the wind.txt','more.txt','test.md']
+# for fname in files:
+#     countLines(fname)
+
+path = './playwith'
+print(path)
+for fname in os.listdir(path):
+    if fname.endswith('.py'):
+        file_path = os.path.join(path,fname)
+        countLines(file_path)
