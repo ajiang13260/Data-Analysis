@@ -10,11 +10,11 @@ Crawler
 # print(r.text)
 
 # Filename:dji.py
-# import requests
-# re = requests.get('http://money.cnn.com/data/dow30') # the url may change
-# print(re.text)
-# print(re.content)
-# print(re.json())
+import requests
+re = requests.get('http://money.cnn.com/data/dow30') # the url may change
+print(re.text)
+print(re.content)
+print(re.json())
 
 # import requests
 
@@ -80,6 +80,7 @@ Crawler
 # print(s)
 
 
-import requests
-r = requests.get('https://www.speedycloud.cn/')
-print(r.text)
+
+# import requests
+# r = requests.get('https://www.speedycloud.cn/')
+# print(r.text)
