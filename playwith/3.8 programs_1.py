@@ -43,7 +43,6 @@ headers = {'User-Agent':"Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML
 while count < 50:
     try:
         r = requests.get('https://book.douban.com/subject/1084336/comments/', headers = headers)
-        count += 1
     except Exception as err:
         print(err)
         break
@@ -51,4 +50,21 @@ while count < 50:
     comments = soup.find_all('span','short')
     pattern = re.compile(' <span class="user-stars allstar(.*?) rating"')
     
-    # Other way
+    # Other way:we can use a whole regular ecpression to pattern comments and rangking stars
+
+    p = re.findall(pattern,r.text)
+    for item in comments:
+        count +=1
+        if count > 50:
+            # count the number of comments more than 50 of the page
+            count_del += 1
+        else:
+            print(count,item.string)
+    for star in p:
+        lst_stars.append(int(star))
+    time.sleep(5)   # delay request from douban's robots.txt
+    i += 1
+    for star in lst_stars[:count_del]:   # calculate the rating star of 50 comments
+        s += int(star)
+if count_del >= 50:
+    print(s//(len(lst_stars)-count_del))
