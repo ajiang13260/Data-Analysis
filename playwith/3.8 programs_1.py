@@ -34,21 +34,21 @@ Comments parsing
 import requests,re,time
 from bs4 import BeautifulSoup
 
-count = 0
-i = 0
-s, count_s, count_del = 0, 0, 0
-lst_stars = []
-
+count = 0  # 控制评论数量50？本题不需要控制评分数量
+i = 0  # 控制翻页
+s, count_del = 0, 0  # s为star总分相加，count_del是没有评分的评论？
+lst_stars = []  # 评论组成的数列
 headers = {'User-Agent':"Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.83 Safari/535.11"}
+
 while count < 50:
     try:
-        r = requests.get('https://book.douban.com/subject/1084336/comments/', headers = headers)
+        r = requests.get('https://book.douban.com/subject/1084336/comments/hot?p='+str(i+1), headers = headers)
     except Exception as err:
         print(err)
         break
     soup = BeautifulSoup(r.text,'lxml')
     comments = soup.find_all('span','short')
-    pattern = re.compile(' <span class="user-stars allstar(.*?) rating"')
+    pattern = re.compile('<span class="user-stars allstar(.*?)rating"')
     
     # Other way:we can use a whole regular ecpression to pattern comments and rangking stars
 
@@ -66,5 +66,6 @@ while count < 50:
     i += 1
     for star in lst_stars[:count_del]:   # calculate the rating star of 50 comments
         s += int(star)
-if count_del >= 50:
-    print(s//(len(lst_stars)-count_del))
+print(s,count_del,len(lst_stars))
+# if count_del >= 50:
+print('The average star of book is',s//(len(lst_stars)-count_del))
