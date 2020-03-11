@@ -1,18 +1,18 @@
 
 # x = int(input('输入成绩：'))
-# score = eval(input("enter the score: "))
-# if  0 <= score <= 100:
-    # if x >= 90:
-    #     print('A')
-    # elif x >= 70:
-    #     print('B')
-    # elif x >= 60:
-    #     print('C')
-    # elif x >= 0:
-    #     print('D')
-    # print("The grade of {} is {}.".format(score, grade)) 
-# else:
-#     print('Invalid score')
+score = eval(input("enter the score: "))
+if  0 <= score <= 100:
+    if score >= 90:
+        grade = 'A'
+    elif score >= 70:
+        grade = 'B'
+    elif score >= 60:
+        grade = 'C'
+    elif score >= 0:
+        grade = 'D'
+    print("The grade of {} is {}.".format(score, grade)) 
+else:
+    print('Invalid score')
 
 # from math import sqrt
 # a = int(input('a ='))
@@ -33,7 +33,7 @@
 # else:
 #     print('no real solution')
 
-x = int(input('x = '))
+# x = int(input('x = '))
 # if x < 0:
 #     y = -1
 # elif x == 0:
@@ -42,15 +42,15 @@ x = int(input('x = '))
 #     y = 1
 # print('y =', y)
 
-if x != 0:
-    if x < 0:
-        y = -1
-    else:
-        y = 1
-else:
-    y = 0
+# if x != 0:
+#     if x < 0:
+#         y = -1
+#     else:
+#         y = 1
+# else:
+#     y = 0
 
-# print('y =', y)
-print('y = {:}'.format(y))
+# # print('y =', y)
+# print('y = {:}'.format(y))
 
-# help(eval)
+# # help(eval)
