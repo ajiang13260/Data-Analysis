@@ -12,4 +12,10 @@
 # print('Your firstname is:',first)
 # print('Your full name is:',sur,first)
 
-print(round(2.5)) #四舍六入五取偶
+# print(round(2.5)) #四舍六入五取偶
+
+import math
+print(math.pi)
+# print(pi)
+help(math)
+# dir(math)
