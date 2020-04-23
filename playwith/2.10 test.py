@@ -141,7 +141,65 @@
 # print(x)
 
 # 6th
-flag = 1
-for i in range(111,10000,37):
-    j = i//10
-    
+# flag = 1
+# for i in range(111,1000,37):
+#     j = i//10
+#     k = i%10
+#     m = k*100+j
+# 思路是对的，但是缺少了一种情况，也就是向左移动两格
+#     if m % 37 != 0:
+#         flag = 0
+#         break
+# if flag == 1:
+#     print(True)
+
+# 7th
+# for i in range(2,1001):
+#     s = 1
+#     for j in range(2,i):
+#         if i % j == 0:
+#             s += j
+#     if s == i:
+#         print(i,end=' ')
+
+# for i in range(1,1001):
+#     s = 0
+#     for j in range(1,i):
+#         if i%j == 0:
+#             s += j
+#     if s == i:
+#         print('\n',i,' ',end='')
+#         print("it's factors are ",end='')
+#         for j in range(1,i):
+#             if i%j == 0:
+#                 print(j,end=' ')
+
+# 8th
+# from math import sqrt
+# flag = 1
+# def isprime(x):
+#     if x == 1:
+#         return 0
+#     j = int(sqrt(x))
+#     for i in range(2,j+1):
+#         if x % i == 0:
+#             return 0
+#     return 1
+
+# for k in range(4,2001,2):
+#     for m in range(2,k):
+#         n = k - m
+#         if isprime(m) and isprime(n):
+#             print('{}={}+{}'.format(k,m,n))
+#             break
+
+
+# 运行测试代码
+# s = 0
+# for i in range(1, 11):
+#      if i % 2 == 0:
+#         continue
+#      if i % 10 == 5:
+#         break
+#      s = s + i
+# print(s)
