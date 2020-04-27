@@ -88,3 +88,44 @@
 
 # i = '5' * 2000
 # print(int(i)%84) 
+
+# aStr = b'\xe6\x89\x8e\xe5\xbf\x83\xe4\xba\x86\xef\xbc\x8c\xe8\x80\x81\xe9\x93\x81'
+# bStr = aStr.decode()
+# print(bStr)
+
+# test 1
+# string = 'My moral standing  is: 0.98765'
+# # help(string.find)
+# a = string.find('0')
+# b = string[a:]
+# print(float(b))
+
+# c = string.split(' ')
+# d = float(c[5])
+# print(d)
+
+# e = string.split(':')
+# f = e[1]
+# print(float(f))
+
+# test 2
+# x =  ['HELLO', 'PH', 'Hi', 'read', 'tmp123', 'Our', 'vmr']
+# for i in x:
+#     i_temp = i.lower()
+#     for j in i_temp:
+#         if j in 'aeiou' or j in '0123456789':
+#             break
+#     else:
+#         print(i)
+
+# test 3
+i = 1
+s = 0
+j = 1
+while j <= 2000:
+    s = s + i*5
+    i = i*10
+    j += 1
+print(s%84)
+
+print(int('5'*2000)%84)
