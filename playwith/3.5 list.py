@@ -2,9 +2,13 @@
 # jSores = [9,9,8.5,10,7,8,8,9,8,10]
 # aScore = 9
 # jSores.sort()
+# print(jSores)
 # jSores.pop()
+# print(jSores)
 # jSores.pop(0)
+# print(jSores)
 # jSores.append(aScore)
+# print(jSores)
 # aveScore = sum(jSores)/len(jSores)
 # print(aveScore)
 
@@ -45,7 +49,6 @@
 
 # '""'
 
-# import os
 # file = open('Blowing in the wind'+'.txt', 'w+')
 # file.write('''
 #     How many roads must a man walk down
@@ -58,7 +61,7 @@
 # ''')
 # file.close
 
-# import os
+
 # def insert_line(lines):
 #     lines.insert(0,"Blowin'in the wind\n")
 #     lines.insert(1,"Bob Dylan\n")
@@ -84,19 +87,30 @@
 # print('the new string is:',list_sd)
 
 
-def move_substr(s, flag, n):
-    if n > len(s):
-        return -1
-    else:
-        if flag == 1:
-            return s[n:] + s[0:n]
-        elif flag == 2:
-                return s[-n:] + s[:-n]
+# def move_substr(s, flag, n):
+#     if n > len(s):
+#         return -1
+#     else:
+#         if flag == 1:
+#             return s[n:] + s[0:n]
+#         elif flag == 2:
+#                 return s[-n:] + s[:-n]
 
-if __name__ == '__mian__':
-    s, flag, n = input("enter the 'string, flag, n':").split(',')
-    result = move_substr(s, int(flag), int(n))
-    if result != 1:
-        print(result)
-    else:
-        print('the n is not too large')
+# if __name__ == '__mian__':
+#     s, flag, n = input("enter the 'string, flag, n':").split(',')
+#     result = move_substr(s, int(flag), int(n))
+#     if result != 1:
+#         print(result)
+#     else:
+#         print('the n is not too large')
+
+# numList = [3,11,5,8,16,1]
+# fruitList = ['apple','banana','pear','lemon','avocado']
+# numList.sort(reverse=True)
+# print(numList)
+
+# help(sorted)
+# fruitList.sort(key=len)
+# print(fruitList)
+# print(sorted(fruitList,key=len))
+# print(fruitList)
