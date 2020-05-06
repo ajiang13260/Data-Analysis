@@ -3,6 +3,10 @@
 
 # 拓展二：输入/输出&函数式编程
 # x,y = input('input:').split()
+lst = input('Input:').split(',')
+print(lst)
+lst1 = [eval(item) for item in lst]
+print(lst1)
 
 # help(map)
 # lst = [3,2,5,8,1]
@@ -67,12 +71,12 @@
 # ——手动刷新加载出来的文件就是我们需要找的地址
 # ——找到并复制request url，用get获取
 # ——还可以获得请求头（usr-agent）
-import requests
-r = requests.get('https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2509&k=&num=50&page=1&r=0.33569806420694337&callback=jQuery111207737366291666399_1578147387085&_=1578147387087')
-print(r.status_code)
-# print(r.text)
-f = r.text.encode('utf-8').decode('unicode-escape')
-print(f)
+# import requests
+# r = requests.get('https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2509&k=&num=50&page=1&r=0.33569806420694337&callback=jQuery111207737366291666399_1578147387085&_=1578147387087')
+# print(r.status_code)
+# # print(r.text)
+# f = r.text.encode('utf-8').decode('unicode-escape')
+# print(f)
 
 # 方法二：查询字符串参数query string parameters
 # ——将数据放到一个字典中，传给get函数的params参数

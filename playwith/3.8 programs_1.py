@@ -53,19 +53,22 @@ while count < 50:
     # Other way:we can use a whole regular ecpression to pattern comments and rangking stars
 
     p = re.findall(pattern,r.text)
+    
     for item in comments:
         count +=1
         if count > 50:
             # count the number of comments more than 50 of the page
             count_del += 1
-        else:
-            print(count,item.string)
+        # else:
+        #     print(count,item.string)
     for star in p:
         lst_stars.append(int(star))
     time.sleep(5)   # delay request from douban's robots.txt
     i += 1
     for star in lst_stars[:count_del]:   # calculate the rating star of 50 comments
         s += int(star)
+print(p)
+print(lst_stars)
 print(s,count_del,len(lst_stars))
 # if count_del >= 50:
 print('The average star of book is',s//(len(lst_stars)-count_del))

@@ -94,27 +94,48 @@
 # print('the new string is:{}'.format(' '.join(cString)))
 
 # 2nd
-def move_substr(s,flag,n):
-    if int(n) <= len(s):
-        if flag == 1:
-            # s.replace(s[0,int(n)-1],'')
-            # s.append(s[0,int(n)-1])
-            return s[n:] + s[:n]
-        if flag == 2:
-            # s.replace(s[-int(n),-1],'')
-            # s.append(s[-int(n),-1])
-            return s[-n:] + s[:-n]
-        return s
-    else:
-        return -1
+# def move_substr(s,flag,n):
+#     if int(n) <= len(s):
+#         if flag == 1:
+#             # s.replace(s[0,int(n)-1],'')
+#             # s.append(s[0,int(n)-1])
+#             return s[n:] + s[:n]
+#         if flag == 2:
+#             # s.replace(s[-int(n),-1],'')
+#             # s.append(s[-int(n),-1])
+#             return s[-n:] + s[:-n]
+#         return s
+#     else:
+#         return -1
 
 # if __name__ == '__main__':
 # main模块仅起到未雨绸缪的作用，如果其他函数引用这个.py文件，则main模块中的结果不输出，仅作为数据使用
-s,flag,n = input().split(',')
-result = move_substr(s,int(flag),int(n))
-if result != -1:
-    print(result)
-else:
-    print('the n is too large')
+# s,flag,n = input().split(',')
+# result = move_substr(s,int(flag),int(n))
+# if result != -1:
+#     print(result)
+# else:
+#     print('the n is too large')
 
 # help(__name__)
+
+
+
+def move_substr(s,flag,n):
+    if n <= len(s):
+        if flag == 1:
+            s = s[n:] + s[0:n]
+            return s
+        if flag == 2:
+            s = s[-n:] + s[:-n]
+            return s
+    else:
+        return -1
+
+if __name__ == "__main__":
+    s,flag,n = input().split(',')
+    result = move_substr(s,int(flag),int(n))
+    if result == -1:
+        print('the n is too large')
+    else:
+        print(result)
