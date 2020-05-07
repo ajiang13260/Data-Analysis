@@ -37,21 +37,45 @@
 #     print(','.join(num[i:i+10]))
 
 # 2nd
-import random
-with open('random.txt','w+') as f:
-    for j in range(500):
-        j = random.randint(1,100)
-        f.writelines(str(j))
-        f.writelines('\n')
-    f.seek(0)
-    nums = f.readlines()
+# import random
+# with open('random.txt','w+') as f:
+#     for j in range(500):
+#         j = random.randint(1,100)
+#         f.writelines(str(j))
+#         f.writelines('\n')
+#     f.seek(0)
+#     nums = f.readlines()
 
-nums = [num.strip() for num in nums]
-print(nums)
-# print(type(nums))
-setNums = set(nums)
-print(setNums)
+# nums = [num.strip() for num in nums]
+
+# lst = [1,2,3,4]
+# lst1 = [str(i) for i in lst]
+# print(lst1)
+
+
+# # 这个地方不太明白，是什么函数形式
+# # print(nums)
+# # print(type(nums))
+# setNums = set(nums)
+# print(setNums)
 # lst = [0] * 101
+# # print(lst)
 # for num in setNums:
+#     c = nums.count(num)
+#     lst[int(num)] = c
+# print(lst)
 
+# for i in range(len(lst)):
+#     if lst[i] == max(lst):
+#         print(i)
 
+# 3rd
+with open('article.txt','r') as f:
+    content = f.readlines()
+sentence = content[0].split(',','.','!','?','...')
+result = []
+for i in range(len(sentence)):
+    result.append(len(i))
+for j in result:
+    if j == max(result):
+        print(sentence[])
