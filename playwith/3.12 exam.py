@@ -24,20 +24,35 @@
 
 # 2nd
 def pandigital(nums): 
+    lst = []
     for num in nums:
         lnum = list(num)
         intNum = []
-        lst = []
         for string in lnum:
             intNum.append(int(string))
         intNum1 = []
-        for i in range(len(nums)-1):
+        for i in range(len(intNum)):
             intNum1.append(i+1)
         # intNum2 =sorted(intNum)
         if sorted(intNum) == intNum1:
             lst.append(num)
     return lst
- 
+    
 if __name__ == "__main__":
     lst = pandigital(input().split(','))
-    print(lst)
+    for l in lst:
+        print(int(l))
+
+# def pandigital(nums):
+#     flag = False
+#     for num in nums:
+#         num = str(num)
+#         all_number_list = [str(i) for i in range(1, len(num) + 1)]
+#         all_number_in_num_list = [j for j in all_number_list if j in num]
+#         if len(all_number_list) == len(all_number_in_num_list):
+#             print(num)
+#             flag = True
+#     if flag == 0:
+#         print('not found')
+# if __name__ == "__main__":
+#     lst = pandigital(eval(input()))
