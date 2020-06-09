@@ -45,5 +45,49 @@
 # if __name__ == '__main__':  
 #      login()
 
-a = [1,2,3]
-b = []
+
+
+def newusers():
+    userName = input('Enter your username:')
+
+    if userName in system:
+        userName = input('The name is used, try again:')
+    else:
+        passWord = input('Enter your password:')
+        print('Account created!')
+        system[userName] = passWord
+        print('Now try to load.')
+        oldusers()
+        
+ 
+def oldusers():
+    userName = input('Enter your username:')
+    passWord = input('Enter your password:')
+    if system[userName] == passWord:  
+        print(userName, 'welcome back ')  
+    else:  
+        print('login incorrect')  
+ 
+def login():
+    option = '''
+            (N)ew User Login 
+            (O)ld User Login
+            (E)xit
+            """
+     Enter the option
+     '''
+    print(option)
+    userType = input()
+    if userType == 'N':
+        newusers()
+    elif userType == 'O':
+        oldusers()
+    elif userType == 'E':
+        quit
+    else:
+        print('Please enter the right letter:')
+
+ 
+if __name__ == '__main__':  
+    system = {}
+    login()
