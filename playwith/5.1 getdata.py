@@ -32,7 +32,8 @@
 
 # dji_list = retrieve_dji_list()
 # djidf = pd.DataFrame(dji_list)
-# print(djidf)
+# # print(djidf)
+# djidf.to_csv("djidf.csv")
 
 # 例2 从网站获取一家公司近一年的股票历史数据
 # Filename quotes_history.py
@@ -64,7 +65,8 @@ def retrieve_quotes_historical(stock_code):
     return  [item for item in quotes if 'type' not in item]
  
 quotes = retrieve_quotes_historical('AXP')
-print(quotes)
+# print(quotes)
 quotesdf_ori = pd.DataFrame(quotes)
 quotesdf = quotesdf_ori.drop(['adjclose'], axis = 1)
-print(quotesdf)
+# print(quotesdf)
+quotesdf.to_excel("quotesdf.xlsx")
