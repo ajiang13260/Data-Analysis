@@ -23,14 +23,15 @@ def retrieve_quotes_historical(stock_code):
         quotes = json.loads(m[0])     # m = ['[{...},{...},...]']
         quotes = quotes[::-1]
     return  [item for item in quotes if 'type' not in item]
- 
+
+# 与5.1的区别在于，把日期一列转换成了日期格式显示
 def f(x):
     return date.strftime(x, '%Y-%m-%d')
      
 quotes = retrieve_quotes_historical('AXP')
 quotesdf_ori = pd.DataFrame(quotes)
 lst = []
-lst = list(map(f, list(map(date.fromtimestamp, quotesdf_ori.date))))
+lst = list(map(f, list(map(date.fromtimestamp, quotesdf_ori.date)))) #使用了一个map函数进行转换，涉及到date时间函数，具体原理还不太懂
 quotesdf_ori.index = lst
 quotesdf_m = quotesdf_ori.drop(['adjclose'], axis = 1)
 quotesdf = quotesdf_m.drop(['date'], axis = 1)
