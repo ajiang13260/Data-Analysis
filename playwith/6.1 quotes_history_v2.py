@@ -24,7 +24,7 @@ def retrieve_quotes_historical(stock_code):
         quotes = quotes[::-1]
     return  [item for item in quotes if 'type' not in item]
 
-# 与5.1的区别在于，把日期一列转换成了日期格式显示
+# 与5.1的区别在于，把时间戳改成了常规格式
 def f(x):
     return date.strftime(x, '%Y-%m-%d')
      
@@ -35,4 +35,5 @@ lst = list(map(f, list(map(date.fromtimestamp, quotesdf_ori.date)))) #使用了�
 quotesdf_ori.index = lst
 quotesdf_m = quotesdf_ori.drop(['adjclose'], axis = 1)
 quotesdf = quotesdf_m.drop(['date'], axis = 1)
-print(quotesdf)
+# print(quotesdf)
+quotesdf.to_csv("quotesdf.csv")
