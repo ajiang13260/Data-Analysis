@@ -35,5 +35,6 @@ lst = list(map(f, list(map(date.fromtimestamp, quotesdf_ori.date)))) #使用了�
 quotesdf_ori.index = lst
 quotesdf_m = quotesdf_ori.drop(['adjclose'], axis = 1)
 quotesdf = quotesdf_m.drop(['date'], axis = 1)
+# print(type(quotesdf.index))
 # print(quotesdf)
-quotesdf.to_csv("quotesdf.csv")
+# quotesdf.to_csv("quotesdf.csv")
